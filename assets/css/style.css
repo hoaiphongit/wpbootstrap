@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------
+3.0 Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+ * Main navbar
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .navbar-default .navbar-collapse{
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -webkit-transition-duration: .35s;
+        -o-transition-duration: .35s;
+        transition-duration: .35s;
+        -webkit-transition-property: left, right;
+        -o-transition-property: left, right;
+        transition-property: right, left;
+        right: -350px;
+        width: 350px;
+        height: 100% !important;
+        position: fixed;
+        z-index: 9999;
+        background: #000;
+    }
+    .navbar-default .navbar-collapse.collapsing {    
+        -webkit-transition-property: left, right;
+        -o-transition-property: left, right;
+        transition-property: left, right;
+    }
+    .navbar-default .navbar-collapse.in{
+        right: 0;
+    }
+}
